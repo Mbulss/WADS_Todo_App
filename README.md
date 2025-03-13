@@ -1,8 +1,7 @@
 # Week 5 Assignment Submission
 
 ## Repository Link
-Please find the repository for the Week 5 assignment at the following link:
-[Your GitHub Repository](https://github.com/yourusername/your-repo)
+Please find the repository for the Week 5 assignment at the following link: https://github.com/Mbulss/WADS_Todo_App.git
 
 ## Setup Instructions
 To run this project on your local machine, follow these steps:
@@ -10,7 +9,7 @@ To run this project on your local machine, follow these steps:
 ### Prerequisites
 Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/) 
 - [Firebase Account](https://firebase.google.com/)
 
 ### Installation Steps
