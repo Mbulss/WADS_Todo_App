@@ -71,6 +71,5 @@ Ensure that you have correctly set up Firebase Authentication and Firestore:
 5. Retrieve Firebase configuration from **Project Settings > General > Your apps**
 6. Replace the placeholder values in the `.env` file with your actual Firebase credentials.
 
----
-This should cover everything needed for the submission. Let me know if you need any changes!
+
 
