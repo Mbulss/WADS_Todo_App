@@ -1,9 +1,4 @@
 # WADS_Todo_App
-Below is an example **README.md** in Markdown format that you can place in your repository. Feel free to adapt the wording and structure to match your exact project details.
-
----
-
-# WADS_Todo_App
 
 A **React + Firebase** Todo application that includes user authentication, real-time database operations, and a user profile page. This project was created for **Week 5** of WADS and demonstrates core concepts such as sorting, filtering, authentication, and responsive design using Tailwind CSS.
 
