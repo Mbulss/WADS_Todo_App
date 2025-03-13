@@ -1,104 +1,76 @@
-# WADS_Todo_App
+# Week 5 Assignment Submission
 
-A **React + Firebase** Todo application that includes user authentication, real-time database operations, and a user profile page. This project was created for **Week 5** of WADS and demonstrates core concepts such as sorting, filtering, authentication, and responsive design using Tailwind CSS.
+## Repository Link
+Please find the repository for the Week 5 assignment at the following link:
+[Your GitHub Repository](https://github.com/yourusername/your-repo)
 
-## Table of Contents
+## Setup Instructions
+To run this project on your local machine, follow these steps:
 
-- [Getting Started](#getting-started)
-- [Firebase Configuration](#firebase-configuration)
-- [Features](#features)
-- [Key Learnings](#key-learnings)
-- [Technical Challenges](#technical-challenges)
-- [License](#license)
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Firebase Account](https://firebase.google.com/)
 
----
-
-## Getting Started
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/yourusername/WADS_Todo_App.git
-   cd WADS_Todo_App
+### Installation Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/your-repo.git
    ```
-
-2. **Install Dependencies**  
-   ```bash
+2. Navigate into the project folder:
+   ```sh
+   cd your-repo
+   ```
+3. Install dependencies:
+   ```sh
    npm install
    ```
-   
-3. **Run the Development Server**  
-   ```bash
-   npm run dev
+4. Set up Firebase:
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project (if you haven't already).
+   - Set up Firebase Authentication with Email/Password.
+   - Get your Firebase configuration from **Project Settings > General > Your apps**.
+   - Create a `.env` file in the root of your project and add the following variables:
+     ```env
+     REACT_APP_FIREBASE_API_KEY=your_api_key
+     REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+     REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+     REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+     REACT_APP_FIREBASE_APP_ID=your_app_id
+     ```
+4. Start the development server:
+   ```sh
+   npm start
    ```
-   The app should be available at **`http://localhost:5173`** (or whichever port Vite chooses).
 
-4. **Build for Production**  
-   ```bash
-   npm run build
-   npm run preview
-   ```
+Your application should now be running on `http://localhost:3000/`.
 
----
+## Implemented Features
+
+### User Authentication
+- **Signup & Login:** Users can sign up and log in using their email and password via Firebase Authentication.
+- **Password Confirmation:** The signup form ensures passwords match before creating an account.
+- **Firebase Error Handling:** Displays user-friendly error messages for authentication failures.
+
+### TODO List Features
+- **Add Tasks:** Users can add tasks with a title, priority level (Low, Medium, High), due date, and time.
+- **Task Management:** Users can mark tasks as completed, delete tasks, or filter them based on priority.
+- **Firebase Database:** Tasks are stored and retrieved using Firebase Firestore, ensuring persistent data.
+- **User Profile:** Displays user email and profile picture (if available) from Firebase Authentication.
+- **File Upload:** Users can upload a file using a styled `Choose File` button, which has been made larger for better usability.
+- **Logout Functionality:** Users can securely log out from their session.
 
 ## Firebase Configuration
-
-1. **Create a Firebase Project**  
-   - Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project (or use an existing one).
-   - Enable **Authentication** (Email/Password) and **Firestore** in the Firebase console.
-
-2. **Update `firebase.js`**  
-   - Copy your project’s Firebase config (apiKey, authDomain, etc.) from the Firebase Console.
-   - Paste it into `firebase.js` inside the `initializeApp(firebaseConfig)` call.
-
-3. **Security Rules**  
-   - Make sure you have appropriate Firestore security rules to allow reads/writes for authenticated users.
+Ensure that you have correctly set up Firebase Authentication and Firestore:
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project (if you haven't already)
+3. Navigate to **Authentication > Sign-in method**, enable **Email/Password Authentication**
+4. Navigate to **Firestore Database**, create a new database, and set security rules for appropriate access control
+5. Retrieve Firebase configuration from **Project Settings > General > Your apps**
+6. Replace the placeholder values in the `.env` file with your actual Firebase credentials.
 
 ---
+This should cover everything needed for the submission. Let me know if you need any changes!
 
-## Features
-
-1. **User Authentication**  
-   - Users can sign up, log in, and log out using Firebase Authentication.  
-   - Friendly error handling for weak passwords, invalid emails, etc.
-
-2. **Todo List Management**  
-   - Add, edit, and delete tasks.  
-   - Toggle task completion status.  
-   - Sort tasks by priority (High, Medium, Low) and filter (All, Completed, Pending).
-
-3. **User Profile**  
-   - A profile page allows users to edit their **full name**, **phone number**, **age**, and **profile picture**.  
-   - Profile pictures are stored as base64 in Firestore (be mindful of the 1 MB document limit).
-
-4. **Real-Time Updates**  
-   - The NavBar uses `onSnapshot` to display the user’s display name and photo in real time.
-
-5. **Responsive UI**  
-   - Built with Tailwind CSS, ensuring it looks good on both desktop and mobile devices.  
-   - A hamburger menu toggles the mobile NavBar items.
-
----
-
-## Key Learnings
-
-- **React + Firebase Integration**  
-  Learned how to integrate Firebase Authentication and Firestore with a React front-end, handling user sessions, real-time updates, and secure reads/writes.
-
-- **Responsive Design with Tailwind CSS**  
-  Improved skills in building mobile-friendly layouts, toggling menus, and ensuring components adapt across screen sizes.
-
-- **Client-Side Validations**  
-  Implemented checks for negative ages, phone numbers containing only digits, and image file size/dimensions to maintain data integrity.
-
----
-
-## Technical Challenges
-
-- **Firestore Document Size**  
-  Storing images as base64 can quickly approach Firestore’s 1 MB document limit, requiring compression or strict file-size checks.
-
-- **Real-Time Listeners**  
-  Managing multiple `onSnapshot` calls (e.g., for NavBar and Todo List) and ensuring stale data didn’t persist was tricky.
-
-- **Responsive Navbar**  
-  Creating a single NavBar component that works elegantly on desktop (horizontal) and mobile (hamburger menu) required careful use of Tailwind’s responsive classes.
