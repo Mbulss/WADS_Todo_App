@@ -1,4 +1,4 @@
-# Week 5 Assignment Submission
+# WADS ToDO List App
 
 ## Repository Link
 Please find the repository for the Week 5 assignment at the following link: https://github.com/Mbulss/WADS_Todo_App.git
@@ -44,7 +44,7 @@ Ensure you have the following installed:
    npm start
    ```
 
-Your application should now be running on `http://localhost:3000/`.
+Your application should now be running on `http://localhost:5173/` (this link may not be accurate as it is from my local machine).
 
 ## Implemented Features
 
