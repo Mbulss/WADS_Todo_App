@@ -1,8 +1,7 @@
 # WADS ToDO List App
 
 ## Repository Link
-Please find the repository for the Week 5 assignment at the following link:  
-[GitHub Repository](https://github.com/Mbulss/WADS_Todo_App.git)
+Please find the repository for the Week 5 assignment at the following link: https://github.com/Mbulss/WADS_Todo_App.git
 
 ## Setup Instructions
 To run this project on your local machine, follow these steps:
