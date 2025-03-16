@@ -37,6 +37,24 @@ Ensure you have the following installed:
 
 Your application should now be running on `http://localhost:5173/` (this link may not be accurate as it is from my local machine).
 
+## Running with Docker
+
+Run the app using Docker for easy deployment:
+
+1. **Install Docker**:  
+   If you don't have Docker installed, follow the [official installation guide](https://docs.docker.com/get-docker/).
+
+2. **Pull the Docker image**:  
+   ```sh
+   docker pull yourusername/todo-app:latest
+   ```
+   Replace yourusername with your Docker Hub username. For development builds (e.g., :dev), adjust the tag accordingly.
+
+3. **Run the container:**
+    ```sh
+    docker run -p 5173:5173 yourusername/todo-app:latest
+    ```
+This maps port 5173 in the container to port 5173 on your host machine. Access the app at http://localhost.
 ## Implemented Features
 
 ### User Authentication
@@ -67,5 +85,56 @@ Ensure that you have correctly set up Firebase Authentication and Firestore:
 5. Retrieve Firebase configuration from **Project Settings > General > Your apps**
 6. Update `firebase.js` file with your actual Firebase credentials.
 
+---
+
+## Sign Up
+
+1. Click on `Sign up` if you’re a new user.
+2. Fill in the required fields (email, password, confirm password, etc.).
+3. Submit the form. You’ll be automatically logged in after signing up.
+
+## Login
+
+1. Click `Login` if you already have an account.
+2. Enter your registered email and password.
+3. Click `Submit` to access your personalized todo list.
+
+## U CAN TRY USING THIS EMAIL AND PASSWORD 
+## Email : haniif.wardana@binus.ac.id Password : 2702358065
+
+## Reset Password
+
+1. On the login page, click `Forgot Password`.
+2. Enter your registered email address.
+3. Check your inbox for a password reset link and follow the instructions.
+
+## Add Tasks
+
+1. On the **Todo** page:
+   - Enter a task description in the `Task` field.
+   - Select a priority level (Low/Medium/High).
+   - Set a `Due Date & Time`.
+2. Click `Add Task` to save it to your list.
+
+## Manage Tasks
+
+- **Mark as Complete**: Check the checkbox next to a task.
+- **Edit Task**:
+  1. Click the `⋮` (three-dot menu) next to the task.
+  2. Select `Edit`, modify the task details, and save.
+- **Delete Task**:
+  - Click `Delete` in the task’s menu or next to the task.
+
+## User Profile
+
+1. Click `Profile` (visible next to your email in the navigation bar).
+2. Update your profile picture or personal details.
+3. Changes are saved automatically and reflected in the navbar.
+
+## Logout
+
+- Click `Log out` in the navigation bar to securely end your session.
+
+---
 
 
